@@ -356,3 +356,200 @@ function lastChars(a, b){
   const lastB = b.length > 0 ? b[b.length - 1] : '@';
   return data18.innerHTML = firstA + lastB;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let input19 = document.getElementById("firstLast6");
+let btn19 = document.getElementById("btn19");
+let data19 = document.getElementById("data19");
+
+btn19.onclick = function () {
+  let nums = input19.value.split(",").map(Number); 
+  data19.innerHTML = firstLast6(nums); 
+  input19.value = "";
+}
+
+function firstLast6(nums) {
+  return nums[0] === 6 || nums[nums.length - 1] === 6;
+}
+
+
+
+
+
+
+
+
+let sameFirstLast1 = document.getElementById("sameFirstLast1");
+let btn20 = document.getElementById("btn20");
+let data20 = document.getElementById("data20");
+
+btn20.onclick = function () {
+  let nums = sameFirstLast1.value.split(",").map(Number); 
+  data20.innerHTML = sameFirstLast(nums); 
+  sameFirstLast1.value = "";
+}
+
+function sameFirstLast(nums){
+  if (nums.length >= 1 && nums[0] === nums[nums.length - 1]) {
+    return data20.innerHTML = true;
+} else {
+    return data20.innerHTML = false;
+}
+}
+
+
+
+
+let btn21 = document.getElementById("btn21");
+let data21 = document.getElementById("data21");
+
+btn21.onclick = function () {
+  data21.innerHTML = makePi();
+}
+
+function makePi(){
+  return data21.innerHTML = [3, 1, 4];
+}
+
+
+
+let commonEnd1 = document.getElementById("commonEnd1");
+let commonEnd2 = document.getElementById("commonEnd2");
+let btn22 = document.getElementById("btn22");
+let data22 = document.getElementById("data22");
+
+btn22.onclick = function () {
+  data22.innerHTML = commonEnd(commonEnd1.value, commonEnd2.value);
+  commonEnd1.value = "";
+  commonEnd2.value = "";
+}
+
+function commonEnd(a, b){
+  if (a[0] === b[0] || a[a.length - 1] === b[b.length - 1]) {
+       return data22.innerHTML = true;
+   } else {
+       return data22.innerHTML = false;
+   }
+}
+
+
+
+
+
+
+let nums3 = document.getElementById("sum3");
+let btn23 = document.getElementById("btn23");
+let data23 = document.getElementById("data23");
+
+btn23.onclick = function () {
+  let nums = nums3.value.split(",").map(Number); 
+  data23.innerHTML = sum3(nums); 
+  nums3.value = "";
+}
+
+function sum3(nums){
+  return data23.innerHTML = nums[0] + nums[1] + nums[2];
+}
+
+
+
+
+
+
+let rotateNums = document.getElementById("rotateLeft1");
+let btn24 = document.getElementById("btn24");
+let data24 = document.getElementById("data24");
+
+btn24.onclick = function () {
+  let nums = rotateNums.value.split(",").map(Number); 
+  data24.innerHTML = rotateLeft3(nums); 
+  rotateNums.value = "";
+}
+
+function rotateLeft3(nums){
+  return data24.innerHTML = [nums[1], nums[2], nums[0]];
+}
+
+
+
+
+
+
+let reverse3A = document.getElementById("reverse3");
+let btn25 = document.getElementById("btn25");
+let data25 = document.getElementById("data25");
+
+btn25.onclick = function () {
+  let nums = reverse3A.value.split(",").map(Number); 
+  data25.innerHTML = reverse3(nums); 
+  reverse3A.value = "";
+}
+
+function reverse3(nums){
+  return [nums[2], nums[1], nums[0]];
+}
+
+
+
+
+
+
+let maxEndNum = document.getElementById("maxEnd");
+let btn26 = document.getElementById("btn26");
+let data26 = document.getElementById("data26");
+
+btn26.onclick = function () {
+  let nums = maxEndNum.value.split(",").map(Number); 
+  data26.innerHTML = maxEnd3(nums); 
+  maxEndNum.value = "";
+}
+
+function maxEnd3(nums){
+  let max;
+    if (nums[0] > nums[2]) {
+        max = nums[0];
+    } else {
+        max = nums[2];
+    }
+    return data26.innerHTML = [max, max, max];
+}
+
+
+
+
+
+
+let sum2Num = document.getElementById("sum2");
+let btn27 = document.getElementById("btn27");
+let data27 = document.getElementById("data27");
+
+btn27.onclick = function () {    
+  let nums = sum2Num.value.split(",").map(Number); 
+  data27.innerHTML = sum2(nums); 
+  sum2Num.value = "";
+}
+
+function sum2(nums){
+  if (nums.length === 0) {
+       return 0;
+   } else if (nums.length === 1) {
+       return nums[0];
+   } else {
+       return nums[0] + nums[1];
+   }
+}
+
