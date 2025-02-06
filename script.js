@@ -553,3 +553,208 @@ function sum2(nums){
    }
 }
 
+
+
+
+
+
+
+
+let middleWay1 = document.getElementById("middleWay1");
+let middleWay2 = document.getElementById("middleWay2");
+let btn28 = document.getElementById("btn28");
+let data28 = document.getElementById("data28");
+
+btn28.onclick = function () {
+  middleWay(middleWay1.value, middleWay2.value);
+  middleWay1.value = "";
+  middleWay2.value = "";
+}
+
+function middleWay(a, b) {
+  return data28.innerHTML = [a[1], b[1]]; 
+}
+
+
+
+
+
+
+
+
+let makeEnds1 = document.getElementById("makeEnds1");
+let btn29 = document.getElementById("btn29");
+let data29 = document.getElementById("data29");
+
+btn29.onclick = function () {
+  let nums = makeEnds1.value.split(",").map(Number); 
+  data29.innerHTML = makeEnds(nums); 
+  makeEnds1.value = "";
+}
+
+function makeEnds(nums){
+  return data29.innerHTML = [nums[0], nums[nums.length - 1]];
+}
+
+
+
+
+
+
+
+
+
+
+
+let has23Num = document.getElementById("has23");
+let btn30 = document.getElementById("btn30");
+let data30 = document.getElementById("data30");
+
+btn30.onclick = function () {
+  let nums = has23Num.value.split(",").map(Number); 
+  data30.innerHTML = has23(nums); 
+  has23Num.value = "";
+}
+
+function has23(nums){
+  return data30.innerHTML = nums.includes(2) || nums.includes(3);
+}
+
+
+
+
+
+
+
+let no23Num = document.getElementById("no23");
+let btn31 = document.getElementById("btn31");
+let data31 = document.getElementById("data31");
+
+btn31.onclick = function () {
+  let nums = no23Num.value.split(",").map(Number); 
+  data31.innerHTML = no23(nums); 
+  no23Num.value = "";
+}
+
+function no23(nums){
+  return data31.innerHTML = !nums.includes(2) && !nums.includes(3);
+}
+
+
+
+
+
+
+
+let makeLastNum = document.getElementById("makeLast1");
+let btn32 = document.getElementById("btn32");
+let data32 = document.getElementById("data32");
+
+btn32.onclick = function () {
+  let nums = makeLastNum.value.split(",").map(Number); 
+  data32.innerHTML = makeLast(nums); 
+  makeLastNum.value = "";
+}
+
+  function makeLast(nums){
+    nums.push(0);
+     return data32.innerHTML = nums;
+ }
+
+
+
+
+
+
+let double23Num = document.getElementById("double23");
+let btn33 = document.getElementById("btn33");
+let data33 = document.getElementById("data33");
+
+btn33.onclick = function () {
+  let nums = double23Num.value.split(",").map(Number); 
+  data33.innerHTML = double23(nums); 
+  double23Num.value = "";
+}
+
+function double23(nums){
+  return data33.innerHTML = (nums[0] === 2 && nums[1] === 2) || (nums[0] === 3 && nums[1] === 3);
+}
+
+
+
+
+
+
+
+let fix23Num = document.getElementById("fix23")
+let btn34 = document.getElementById("btn34");
+let data34 = document.getElementById("data34");
+
+btn34.onclick = function () {
+  let nums = fix23Num.value.split(",").map(Number); 
+  data34.innerHTML = fix23(nums); 
+  fix23Num.value = "";
+}
+
+function fix23(nums){
+  for (let i = 0; i < nums.length - 1; i++) {
+      if (nums[i] === 2 && nums[i + 1] === 3) {
+          nums[i + 1] = 0;
+      }
+  }
+  return data34.innerHTML = nums;
+}
+
+
+
+
+
+
+
+let start1Num = document.getElementById("start1")
+let start2Num = document.getElementById("start2")
+let btn35 = document.getElementById("btn35");
+let data35 = document.getElementById("data35");
+
+btn35.onclick = function () {
+  start1(start1Num.value.split(",").map(Number), start2Num.value.split(",").map(Number));
+  start1Num.value = "";
+  start2Num.value = "";
+}
+
+function start1(a, b) {
+  let count = 0;
+  if (a[0] === 1) {
+    count++;
+  }
+  if (b[0] === 1) {
+    count++;
+  }
+  return data35.innerHTML = count;
+}
+
+
+
+
+
+
+
+
+
+let biggerTwo1Num = document.getElementById("biggerTwo1")
+let biggerTwo2Num = document.getElementById("biggerTwo2")
+let btn36 = document.getElementById("btn36");
+let data36 = document.getElementById("data36");
+
+btn36.onclick = function () {
+  biggerTwo(biggerTwo1Num.value.split(",").map(Number), biggerTwo2Num.value.split(",").map(Number));
+  biggerTwo1Num.value = "";
+  biggerTwo2Num.value = "";
+}
+
+function biggerTwo(a, b) {
+  if (a[0] > b[0]) {
+      return data36.innerHTML = a;
+  }
+  return data36.innerHTML = b;
+}
